@@ -20,19 +20,29 @@ def checklist_item(item1, item2):
     print(f"now I have to {item1} then {item2}")
     return f"{item1} then {item2}"
 
-def 
-    
+def add_item(item1, optional_item):
+    print(f"after take off you have to {item1} then if your plane is equiped {optional_item}")
+
+def checklists(flight_task1, flight_task2, item1, item2, optional_item):
+    engine_start_checklist()
+    takeoff_checklist()
+    checklist(flight_task1,flight_task2)
+    checklist_item(item1,item2)
+    add_item(item1,optional_item)
 
 
 def main():
-    flight_taks1 = "set altimeter"
+    flight_task1 = "set altimeter"
     flight_task2 = "set heading"
     item1 = "clear prop"
     item2 = "check fuel"
+    optional_item = "check oil"
     engine_start_checklist()
     takeoff_checklist()
-    checklist(flight_taks1, flight_task2)
+    checklist(flight_task1, flight_task2)
     checklist_item(item1, item2)
-   
+    add_item(item1, optional_item)
+    checklists(flight_task1, flight_task2, item1, item2, optional_item)
+
 if __name__ == "__main__":
     main()
